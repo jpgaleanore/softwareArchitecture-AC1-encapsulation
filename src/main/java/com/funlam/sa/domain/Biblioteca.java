@@ -51,7 +51,7 @@ public class Biblioteca {
         }
         libro.prestar();
         usuario.prestarLibro(titulo);
-        log.info("Préstamo realizado a {} del libro '{}'.", usuario.getNombre(), titulo);
+        log.info("El Préstamo fue realizado a {} del libro '{}'.", usuario.getNombre(), titulo);
         return true;
     }
 
@@ -63,7 +63,7 @@ public class Biblioteca {
         }
         if (usuario.devolverLibro(titulo)) {
             libro.devolver();
-            log.info("Libro '{}' devuelto por usuario {}.", titulo, usuario.getNombre());
+            log.info("El libro '{}' devuelto por usuario {}.", titulo, usuario.getNombre());
             return true;
         }
         return false;
